@@ -47,8 +47,8 @@ defmodule ExAws.ServiceDiscovery do
     request("ListNamespaces", %{})
   end
 
-  def list_services() do
-    request("ListServices", %{})
+  def list_services(filters \\[]) do
+    request("ListServices", %{ Filters: filters })
   end
 
   def list_instances(service_id) do
