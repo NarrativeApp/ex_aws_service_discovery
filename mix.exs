@@ -1,10 +1,12 @@
 defmodule ExAws.ServiceDiscovery.MixProject do
   use Mix.Project
 
+  @version "0.1.2"
+
   def project do
     [
       app: :ex_aws_service_discovery,
-      version: "0.1.2",
+      version: @version,
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -33,13 +35,14 @@ defmodule ExAws.ServiceDiscovery.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
-      {:ex_doc, ">= 0.0.0", only: [:dev, :test], runtime: false},
-      {:hackney, ">= 0.0.0", only: [:dev, :test]},
-      {:sweet_xml, ">= 0.0.0", only: [:dev, :test]},
-      {:poison, ">= 0.0.0", only: [:dev, :test]},
-      {:xml_builder, ">= 0.0.0"},
-      {:ex_aws, "~> 2.0"}
+      {:credo, "~> 1.4", only: ~w[dev test]a, runtime: false},
+      {:ex_aws, "~> 2.0"},
+      {:ex_doc, ">= 0.0.0", only: ~w[dev test]a, runtime: false},
+      {:git_ops, "~> 2.2", only: ~w[dev test]a, runtime: false},
+      {:hackney, ">= 0.0.0", only: ~w[dev test]a},
+      {:poison, ">= 0.0.0", only: ~w[dev test]a},
+      {:sweet_xml, ">= 0.0.0", only: ~w[dev test]a},
+      {:xml_builder, ">= 0.0.0"}
     ]
   end
 end
