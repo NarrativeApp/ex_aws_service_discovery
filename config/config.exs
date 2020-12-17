@@ -33,3 +33,11 @@ config :ex_aws,
   access_key_id: [System.get_env("AWS_ACCESS_KEY_ID"), :instance_role],
   secret_access_key: [System.get_env("AWS_SECRET_ACCESS_KEY"), :instance_role],
   s3: [region: "us-east-1"]
+
+config :git_ops,
+  mix_project: ExAws.ServiceDiscovery.MixProject,
+  changelog_file: "CHANGELOG.md",
+  repository_url: "https://github.com/NarrativeApp/ExAws.ServiceDiscovery",
+  manage_mix_version?: true,
+  manage_readme_version: "README.md",
+  version_tag_prefix: "v"
