@@ -35,7 +35,7 @@ defmodule ExAws.ServiceDiscovery.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 1.4", only: ~w[dev test]a, runtime: false},
+      {:credo, "~> 1.7", only: ~w[dev test]a, runtime: false},
       {:ex_aws, "~> 2.0"},
       {:ex_doc, ">= 0.0.0", only: ~w[dev test]a, runtime: false},
       {:git_ops, "~> 2.2", only: ~w[dev test]a, runtime: false},
