@@ -10,7 +10,7 @@ by adding `ex_aws_service_discovery` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:ex_aws_service_discovery, "~> 0.1.2"}
+    {:ex_aws_service_discovery, "~> 0.1.3"}
   ]
 end
 ```
